@@ -1,2 +1,61 @@
 <app-header></app-header>
+<p>String: {{productName }}</p>
+<p>Price: {{productPrice}}</p>
+<p>Status: {{productStatus}}</p>
+<p>Infor: {{productName}} - {{productPrice}}</p>
+<p>List: ....</p>
+<button (click)="onHandleClick()">click</button>
+
+<div *ngIf="productStatus">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList; let i = index">
+                <td>{{i +1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.status ? "Còn hàng" : "Hết hàng"}} </td>
+                <td>
+
+                    <button (click)="onHandleDelete(product.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<form action="">
+    <input type="text" (keypress)="onHandleKeyPress($event)" value="{{title}}"> {{title}}
+</form>
+
+<hr>
+
+<h2>NgModel</h2>
+<input type="text" [(ngModel)]="title" value="{{title}}"> {{title}}
+
+<hr>
+
+<h1>Thêm sản phẩm</h1>
+<form action="">
+    Name: <input type="text" name="productName"><br>
+    Price: <input type="number" name="productPrice"><br>
+    <button>submit</button>
+</form>
+
+
+
+
+
+
 <router-outlet></router-outlet>
+<app-footer></app-footer>
