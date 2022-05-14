@@ -1,8 +1,15 @@
 <app-header></app-header>
 
 <app-products [data]="productList"></app-products>
-
 <hr>
+<app-product-add (onAdd)="onHandleAdd($event)"> </app-product-add>
+<hr>
+
+
+
+
+
+
 <p>String: {{productName }}</p>
 <p>Price: {{productPrice}}</p>
 <p>Status: {{productStatus}}</p>
@@ -55,11 +62,6 @@
     Price: <input type="number" name="productPrice"><br>
     <button>submit</button>
 </form>
-
-
-
-
-
 
 <router-outlet></router-outlet>
 <app-footer></app-footer>

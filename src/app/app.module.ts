@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages/pages.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { PagesComponent } from './pages/pages.component';
     ProductsComponent,
     FooterComponent,
     PagesComponent,
+    ProductAddComponent,
 
   ],
   imports: [

@@ -1,7 +1,7 @@
 import { NumberSymbol } from '@angular/common';
 import { Component } from '@angular/core';
 import { filter } from 'rxjs';
-
+import { IProduct } from './models/Product';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -50,30 +50,29 @@ export class AppComponent {
       status: true
     }
   ]
+  onHandleAdd(product: any) {
+    console.log('prduct', product);
+    this.productList.push(product);
+  }
+
+
+
+
+
+
 
 
   onHandleClick() {
     console.log("clickek");
     this.productStatus = !this.productStatus
   }
-
-  onHandleAdd(id:number, name:string, price: number, status: string) {
-    
-
-  }
-
   onHandleDelete(id: number) {
     alert("Bạn có muốn xóa sản phẩm hay không?");
     this.productList = this.productList.filter(product => product.id !== id)
     console.log(id);
   }
-
-
   onHandleKeyPress(event: any) {
     console.log(event.target.value);
     this.title = event.target.value;
   }
-
-
-
 } 
