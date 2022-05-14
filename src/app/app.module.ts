@@ -8,7 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages/pages.component';
-import { HelloComponent } from './hello/hello.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { HelloComponent } from './hello/hello.component';
     ProductsComponent,
     FooterComponent,
     PagesComponent,
-    HelloComponent
+
   ],
   imports: [
     BrowserModule,

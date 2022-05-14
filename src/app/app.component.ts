@@ -30,6 +30,24 @@ export class AppComponent {
       name: "product B",
       price: 3000,
       status: true
+    },
+    {
+      id: 3,
+      name: "product C",
+      price: 33000,
+      status: true
+    },
+    {
+      id: 4,
+      name: "product D",
+      price: 32000,
+      status: true
+    },
+    {
+      id: 5,
+      name: "product E",
+      price: 32000,
+      status: true
     }
   ]
 
