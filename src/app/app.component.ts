@@ -2,6 +2,7 @@ import { NumberSymbol } from '@angular/common';
 import { Component } from '@angular/core';
 import { filter } from 'rxjs';
 import { IProduct } from './models/Product';
+import mockData from '../data';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,38 +19,7 @@ export class AppComponent {
     price: 2000
   };
 
-  productList: { id: number, price: number, name: string, status: boolean }[] = [
-    {
-      id: 1,
-      name: "product A",
-      price: 2000,
-      status: false
-    },
-    {
-      id: 2,
-      name: "product B",
-      price: 3000,
-      status: true
-    },
-    {
-      id: 3,
-      name: "product C",
-      price: 33000,
-      status: true
-    },
-    {
-      id: 4,
-      name: "product D",
-      price: 32000,
-      status: true
-    },
-    {
-      id: 5,
-      name: "product E",
-      price: 32000,
-      status: true
-    }
-  ]
+  productList: IProduct[] = mockData;
   onHandleAdd(product: any) {
     console.log('prduct', product);
     this.productList.push(product);
