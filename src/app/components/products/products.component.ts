@@ -9,10 +9,28 @@ import { ProductService } from '../../services/product.service'
 export class ProductsComponent implements OnInit {
   productList!: IProduct[];
   constructor(private productService: ProductService) {
-    this.productList = this.productService.getProducts();
+
   }
 
   ngOnInit(): void {
+    this.showProducts();
+  }
+
+  showProducts() {
+    this.productService.getProducts().subscribe(data => {
+      this.productList = data
+    })
+  }
+  onRemoveItem(id: number) {
+    const confirm = window.confirm('Bạn có chắc chắn muốn xóa không?');
+    if (confirm) {
+      // call api xoa
+      this.productService.removeProduct(id).subscribe(() => {
+        // reRender
+        this.productList = this.productList.filter(item => item.id !== id);
+      });
+    }
+
   }
 
 }

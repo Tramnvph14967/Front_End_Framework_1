@@ -16,7 +16,9 @@ export class ProductDetailComponent implements OnInit {
   ) {
     const id = this.router.snapshot.paramMap.get('id')!;
     // this.productDetail = mockData.find(item => item.id == +id)!;
-    this.productDetail = this.productService.getProduct(+id);
+    this.productService.getProduct(+id).subscribe(data => {
+      this.productDetail = data
+    })
   }
 
   ngOnInit(): void {

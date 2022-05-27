@@ -10,7 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages/pages.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-
+import { AboutComponent } from './pages/about/about.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HttpClientModule } from '@angular/common/http'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,18 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     PagesComponent,
     ProductAddComponent,
     ProductDetailComponent,
+    AboutComponent,
+    ProductAddComponent,
+    ProductDetailComponent,
+    HomeComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
