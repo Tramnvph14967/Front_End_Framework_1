@@ -1,8 +1,13 @@
-<app-product-detail></app-product-detail>
-<hr>
+<h2>Product List Component</h2>
+<app-products></app-products>
+<router-outlet></router-outlet>
+
+
+
+
 <app-header></app-header>
 
-<app-products [data]="productList"></app-products>
+<app-products></app-products>
 <hr>
 <app-product-add (onAdd)="onHandleAdd($event)"> </app-product-add>
 <hr>
