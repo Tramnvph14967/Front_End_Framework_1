@@ -21,12 +21,6 @@
       "name": "Product D",
       "price": 12334,
       "id": 5
-    },
-    {
-      "name": "Product F",
-      "price": 123456,
-      "status": true,
-      "id": 6
     }
   ]
 }

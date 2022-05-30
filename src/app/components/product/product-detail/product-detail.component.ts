@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
-import mockData from '../../../data';
+import mockData from '@/src/data';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
