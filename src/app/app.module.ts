@@ -14,6 +14,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router';
+import { SigninComponent } from './components/signin/signin.component';
+import { SigupComponent } from './components/sigup/sigup.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +34,8 @@ import { RouterModule } from '@angular/router';
     ProductAddComponent,
     ProductDetailComponent,
     HomeComponent,
+    SigninComponent,
+    SigupComponent
 
   ],
   imports: [

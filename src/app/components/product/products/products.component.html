@@ -5,15 +5,18 @@
             <td>{{ i + 1 }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.price }}</td>
+            <td>{{ product.status}}</td>
             <td>
-               
-                <button class="btn btn-primary ms-1" routerLink="/product/edit/{{ product.id }}">
+                <button class="ms-1" routerLink="/product/edit/{{ product.id }}">
                     Edit
                 </button>
-                <button class="btn btn-danger ms-1" (click)="onRemoveItem(product.id!)">
+                <button class="ms-1" (click)="onRemoveItem(product.id!)">
                     Remove
                 </button>
+                <button class="ms-1">info</button>
             </td>
         </tr>
     </tbody>
 </table>
+
+<router-outlet></router-outlet>
