@@ -32,6 +32,62 @@
       "age": 20,
       "email": "tramnvph14967@gmail.com",
       "password": 123456789
+    },
+    {
+      "name": "nguyen van tram",
+      "age": 12,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "name": "nguyen van tram",
+      "age": 12,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "1234567",
+      "id": 3
+    },
+    {
+      "name": "nguyen van tram",
+      "age": 12,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "1234567",
+      "id": 4
+    },
+    {
+      "name": "nguyen van tram",
+      "age": 12,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "1234567",
+      "id": 5
+    },
+    {
+      "name": "nguyen van tram",
+      "age": 12,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "1234567",
+      "id": 6
+    },
+    {
+      "name": "",
+      "age": 0,
+      "email": "",
+      "password": 0,
+      "id": 7
+    },
+    {
+      "name": "Nguyen van tram",
+      "age": 19,
+      "email": "tramnvph14967@fpt.edu.vn",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "name": "Nguyễn Văn Tăm",
+      "age": 20,
+      "email": "tramnvph14967@gmail.com",
+      "password": "18012002",
+      "id": 9
     }
   ]
 }

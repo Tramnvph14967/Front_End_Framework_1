@@ -3,5 +3,5 @@ export interface IUser {
     name: string,
     age: number,
     email: string,
-    password: number,
+    password: string,
 }

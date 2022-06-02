@@ -9,11 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./sigup.component.css']
 })
 export class SigupComponent implements OnInit {
-  user: IUser ={
+  user: IUser = {
     name: "",
     age: 0,
     email: "",
-    password: 0,
+    password: "",
   }
   constructor(
     private userService: UserService,
@@ -22,6 +22,21 @@ export class SigupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const id = +this.route.snapshot.paramMap.get('id')!;
+    if (id) {
+      this.userService.getUser(id).subscribe(data => {
+        this.user = data
+      })
+    }
   }
-
+  onSubmitSigin() {
+    this.userService.addUser(this.user).subscribe(data => {
+      setTimeout(() => {
+        // redirect về signin
+        alert("Chúc Mừng Bạn Đã Đăng Ký Tài Khoản Thành Công Mời Bạn Đăng Nhập Để Sử Dụng");
+        this.router.navigateByUrl('/signin');
+      }, 2000)
+    });
+  }
 }
+
