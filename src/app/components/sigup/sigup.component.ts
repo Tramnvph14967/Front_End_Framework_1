@@ -31,6 +31,9 @@ export class SigupComponent implements OnInit {
   }
   onSubmitSigin() {
     this.userService.addUser(this.user).subscribe(data => {
+   
+
+      
       setTimeout(() => {
         // redirect về signin
         alert("Chúc Mừng Bạn Đã Đăng Ký Tài Khoản Thành Công Mời Bạn Đăng Nhập Để Sử Dụng");
